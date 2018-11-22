@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Admin.Models;
 
 namespace Admin.Controllers
 {
@@ -23,6 +24,7 @@ namespace Admin.Controllers
         // GET: Cities/Create
         public ActionResult Create()
         {
+            ViewBag.Message = "Create city";
             return View();
         }
 
@@ -45,6 +47,7 @@ namespace Admin.Controllers
         // GET: Cities/Edit/5
         public ActionResult Edit(int id)
         {
+            ViewBag.Message = "edit city";
             return View();
         }
 
@@ -67,6 +70,7 @@ namespace Admin.Controllers
         // GET: Cities/Delete/5
         public ActionResult Delete(int id)
         {
+            ViewBag.Message = "delete city";
             return View();
         }
 
@@ -97,6 +101,17 @@ namespace Admin.Controllers
         public ActionResult Delete_city()
         {
             return View();
+        }
+        public ActionResult getCityDetail()
+        {
+            Cities obj = new Cities();
+            obj.CityName = "Lahore";
+            obj.CityName = "Karachi";
+            obj.CityName = "Islamabad";
+            return View(obj);
+
+       
+
         }
 
 

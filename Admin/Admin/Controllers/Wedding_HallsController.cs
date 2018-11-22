@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Admin.Models;
 
 namespace Admin.Controllers
 {
@@ -16,8 +17,15 @@ namespace Admin.Controllers
 
         // GET: Wedding_Halls/Details/5
         public ActionResult Details(int id)
+
         {
-            return View();
+            Wedding_Halls obj = new Wedding_Halls();
+            obj.HotelName = "PEARL CONTINENTAL";
+            obj.CityName = "Lahore";
+            obj.HallName = "Crystal Hall";
+            return View(obj);
+
+            
         }
 
         // GET: Wedding_Halls/Create

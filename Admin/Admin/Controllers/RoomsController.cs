@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Admin.Models;
 
 namespace Admin.Controllers
 {
@@ -17,7 +18,13 @@ namespace Admin.Controllers
         // GET: Rooms/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+
+            Rooms obj = new Rooms();
+            obj.HotelName = "PEARL CONTINENTAL";
+            obj.CityName = "Lahore";
+            obj.Category = "Economy";
+            return View(obj);
+            
         }
 
         // GET: Rooms/Create

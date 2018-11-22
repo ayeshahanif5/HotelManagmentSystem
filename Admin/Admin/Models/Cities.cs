@@ -7,5 +7,10 @@ namespace Admin.Models
 {
     public class Cities
     {
+        public string CityName { get; set; }
+
+        
     }
+
+
 }

@@ -7,5 +7,8 @@ namespace Admin.Models
 {
     public class Wedding_Halls
     {
+        public string HotelName { get; set; }
+        public string CityName { get; set; }
+        public string HallName { get; set; }
     }
 }
